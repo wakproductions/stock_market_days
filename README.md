@@ -15,6 +15,9 @@ Typically, markets are closed on weekends and the following holidays:
 * Thanksgiving Day (Fourth Thursday of November)
 * Christmas Day (December 25th, or December 24th if on Saturday, December 26th if on Sunday) 
 
+Right now the calculation of dates is limited to before 12/31/2059, but that should give you plenty of time
+to get rich!
+
 ## Installation
 
 In your Gemfile:
@@ -26,7 +29,8 @@ gem 'stock_market_days', git: 'https://github.com/wakproductions/stock_market_da
 ## Available Methods
 
 `is_market_day?` - tells you whether the given date is a date US markets are open
-`market_days_between` - tells number of trading days between two dates 
+`market_days_between` - tells number of trading days between two dates
+`market_days_from` - gives you the trading day of given date, plus number of trading days 
 
 
 Look at the test suite for examples of usage.

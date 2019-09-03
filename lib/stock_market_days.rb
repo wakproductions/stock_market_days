@@ -14,6 +14,16 @@ module StockMarketDays
     def market_days_between(begin_date, end_date)
       @@default_calculator.market_days_between(begin_date, end_date)
     end
+
+    def market_days_from(begin_date, days)
+      @@default_calculator.market_days_from(begin_date, days)
+    end
+
+    def next_market_day(from_date=Date.today)
+      @@default_calculator.market_days_from(from_date, 1)
+    end
+
+
   end
 
 end

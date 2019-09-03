@@ -31,6 +31,19 @@ module StockMarketDays
       days_between
     end
 
+    def market_days_from(begin_day, days)
+      begin_index = market_days_list.index(
+        market_days_list.find { |md| md >= begin_day }
+      )
+      if market_days_list[begin_index] == begin_day
+        market_days_list[begin_index + days]
+      elsif market_days_list[begin_index] > begin_day
+        market_days_list[begin_index - 1 + days]
+      else
+        raise "Calculator Error - This shouldn't happen in StockMarketDays#market_days_from"
+      end
+    end
+
 
   end
 end
