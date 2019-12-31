@@ -3,6 +3,27 @@ require 'stock_market_days'
 
 describe StockMarketDays do
 
+  context 'included in a class' do
+    let(:dummy_class) do
+      class Dummy
+        include StockMarketDays
+
+        def is_market_day_delegator(date)
+          is_market_day?(date)
+        end
+      end
+
+      Dummy.new
+    end
+
+    context '#is_market_day?' do
+      subject { dummy_class.is_market_day_delegator(date) }
+      let(:date) { Date.new(2019,12,30) }
+
+      it { is_expected.to be_truthy }
+    end
+  end
+
   context '#is_market_day?' do
     subject { described_class.is_market_day?(date) }
 
@@ -140,6 +161,5 @@ describe StockMarketDays do
       it { is_expected.to eql(Date.new(2019,9,3)) }
     end
   end
-
 
 end
