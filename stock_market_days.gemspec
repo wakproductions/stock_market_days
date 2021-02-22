@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Winston Kotzan"]
   spec.email         = ["wak@wakproductions.com"]
   spec.summary       = %q{A gem for determining the days that the stock market is open}
-  spec.description   = ""
+  spec.description   = "Tells you whether the US stock market is open on a given day, up to 2059"
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(spec)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "bundler", "~> 1.7"
+  spec.add_dependency "bundler", ">= 1.7"
   spec.add_dependency "rake"
 
   spec.add_development_dependency "clipboard"
