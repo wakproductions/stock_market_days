@@ -45,6 +45,23 @@ describe StockMarketDays do
       it { is_expected.to be_falsey }
     end
 
+    context 'is Juneteenth' do
+      let(:dates) do
+        [
+          Date.new(2022,6,19), # Sunday
+          Date.new(2022,6,20), # Monday (holiday falls on Sunday)
+          Date.new(2022,6,19), # Wednesday
+          Date.new(2027,6,18)  # Friday (holiday falls on Saturday)
+        ]
+      end
+
+      it 'reports market closed on the holiday, or nearest Friday/Monday if on the weekend' do
+        dates.each do |market_closed_day|
+          expect(described_class.is_market_day?(market_closed_day)).to be_falsey
+        end
+      end
+    end
+
     context 'is Thanksgiving' do
       let(:date) { Date.new(2023,11,23) }
 
