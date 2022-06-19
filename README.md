@@ -10,6 +10,7 @@ Typically, markets are closed on weekends and the following holidays:
 * Washington's Birthday (third Monday of Feburary)
 * Good Friday (Determined by http://www.maa.clell.de/StarDate/publ_holidays.html)
 * Memorial Day (last Monday of May)
+* Juneteenth (June 19, or nearest Monday or Friday if on a weekend)
 * Independence Day (July 4, or July 3rd if on Saturday, July 5th if on Sunday)
 * Labor Day (First Monday of September)
 * Thanksgiving Day (Fourth Thursday of November)
@@ -23,7 +24,7 @@ to get rich!
 In your Gemfile:
 
 ```ruby
-gem 'stock_market_days', git: 'https://github.com/wakproductions/stock_market_days.git'
+gem 'stock_market_days'
 ```
 
 ## Available Methods
