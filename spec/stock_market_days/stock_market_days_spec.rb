@@ -83,6 +83,22 @@ describe StockMarketDays do
 
       it { is_expected.to be_falsey }
     end
+
+    context 'is New Year\'s Day' do
+      let(:dates) do
+        [
+          Date.new(2018,1,1),
+          Date.new(2019,1,1),
+          Date.new(2020,1,1)
+        ]
+      end
+
+      it 'reports market closed on New Year\'s Day' do
+        dates.each do |market_closed_day|
+          expect(described_class.is_market_day?(market_closed_day)).to be_falsey
+        end
+      end
+    end
   end
 
   context '#market_days_between' do
