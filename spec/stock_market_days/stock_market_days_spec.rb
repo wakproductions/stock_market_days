@@ -63,9 +63,19 @@ describe StockMarketDays do
     end
 
     context 'is Thanksgiving' do
-      let(:date) { Date.new(2023,11,23) }
+      let(:dates) do
+        [
+          Date.new(2019,11,28),
+          Date.new(2020,11,26),
+          Date.new(2023,11,23)
+        ]
+      end
 
-      it { is_expected.to be_falsey }
+      it 'reports market closed on Thanksgiving' do
+        dates.each do |market_closed_day|
+          expect(described_class.is_market_day?(market_closed_day)).to be_falsey
+        end
+      end
     end
 
     context 'is Christmas (observed)' do
