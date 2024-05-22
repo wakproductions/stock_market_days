@@ -1,3 +1,6 @@
+Version 1.1.1 (5/22/2024)
+* A few historical date corrections
+
 Version 1.1.0 (6/19/2022)
 * Adjusted market days for new Juneteenth federal holiday
 
