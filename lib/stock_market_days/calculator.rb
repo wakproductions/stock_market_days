@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'stock_market_days/utility_methods'
 
 module StockMarketDays
@@ -8,7 +10,7 @@ module StockMarketDays
 
     def initialize(market_days_file)
       file_contents = File.open(market_days_file).read
-      @market_days_list = file_contents.split("\n").map { |date_s| Date.parse(date_s) }
+      @market_days_list = file_contents.split("\n").map { |date_s| Date.strptime(date_s, '%Y-%m-%d') }
     end
 
     def is_market_day?(date=Date.today)
