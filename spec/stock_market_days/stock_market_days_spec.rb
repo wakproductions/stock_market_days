@@ -62,6 +62,12 @@ describe StockMarketDays do
       end
     end
 
+    context 'is Labor Day' do
+      let(:date) { Date.new(2026,9,7) }
+
+      it { is_expected.to be_falsey }
+    end
+
     context 'is Thanksgiving' do
       let(:dates) do
         [
