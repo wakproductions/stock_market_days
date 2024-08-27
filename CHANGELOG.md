@@ -1,3 +1,8 @@
+Version 1.2.0 (8/26/2024)
+* Several date corrections on future market days (thanks to the community)
+* Improved benchmarks on date calculation
+* Added `previous_market_day` method
+
 Version 1.1.1 (5/22/2024)
 * A few historical date corrections
 
