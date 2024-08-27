@@ -23,4 +23,8 @@ module StockMarketDays
     @@default_calculator.market_days_from(from_date, 1)
   end
 
+  def previous_market_day(from_date=Date.today)
+    @@default_calculator.market_days_from(from_date, -1)
+  end
+
 end
