@@ -1,3 +1,6 @@
+Version 1.2.1 (10/25/2024)
+* Fixes a bug in the date calculation when given date is a weekend. (thanks wtn!)
+
 Version 1.2.0 (8/26/2024)
 * Several date corrections on future market days (thanks to the community)
 * Improved benchmarks on date calculation
