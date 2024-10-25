@@ -40,12 +40,16 @@ module StockMarketDays
       if market_days_list[begin_index] == begin_day
         market_days_list[begin_index + days]
       elsif market_days_list[begin_index] > begin_day
-        market_days_list[begin_index - 1 + days]
+        if days == 0
+          market_days_list[begin_index - 1]
+        else
+          offset = days > 0 ? -1 : 0
+          market_days_list[begin_index + offset + days]
+        end
       else
         raise "Calculator Error - This shouldn't happen in StockMarketDays#market_days_from"
       end
     end
-
 
   end
 end
