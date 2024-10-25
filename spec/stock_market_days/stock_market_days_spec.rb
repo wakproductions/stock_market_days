@@ -211,4 +211,32 @@ describe StockMarketDays do
     end
   end
 
+  context '#previous_market_day' do
+    subject { described_class.previous_market_day(from_date) }
+
+    context 'on a Saturday' do
+      let(:from_date) { Date.new(2020,1,4) }
+    
+      it { is_expected.to eql(Date.new(2020,1,3)) }
+    end
+
+    context 'on Labor Day' do
+      let(:from_date) { Date.new(2019,9,2) }
+    
+      it { is_expected.to eql(Date.new(2019,8,30)) }
+    end
+
+    context 'on a regular trading day' do
+      let(:from_date) { Date.new(2019,9,5) }
+
+      it { is_expected.to eql(Date.new(2019,9,4)) }
+    end
+
+    context 'on a Monday' do
+      let(:from_date) { Date.new(2019,9,23) }
+
+      it { is_expected.to eql(Date.new(2019,9,20)) }
+    end
+  end
+
 end
