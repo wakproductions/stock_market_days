@@ -1,3 +1,6 @@
+Version 1.3.0 (12/30/2024)
+* Add 1/9/25 market closed day for Jimmy Carter's death
+
 Version 1.2.1 (10/25/2024)
 * Fixes a bug in the date calculation when given date is a weekend. (thanks wtn!)
 
