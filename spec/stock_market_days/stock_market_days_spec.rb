@@ -105,6 +105,21 @@ describe StockMarketDays do
         end
       end
     end
+
+    context 'is National Day of Mourning' do
+      let(:dates) do
+        [
+          Date.new(2018,12,5),
+          Date.new(2025,1,9),
+        ]
+      end
+
+      it 'reports market closed' do
+        dates.each do |market_closed_day|
+          expect(described_class.is_market_day?(market_closed_day)).to be_falsey
+        end
+      end
+    end
   end
 
   context '#market_days_between' do
