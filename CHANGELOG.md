@@ -1,3 +1,6 @@
+Verion 1.4.0 (2/14/2025)
+* Expanded covered date range to 1990-2060.
+
 Version 1.3.0 (12/30/2024)
 * Add 1/9/25 market closed day for Jimmy Carter's death
 
