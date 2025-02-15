@@ -29,9 +29,9 @@ gem 'stock_market_days'
 
 ## Available Methods
 
-`is_market_day?` - tells you whether the given date is a date US markets are open
-`market_days_between` - tells number of trading days between two dates
-`market_days_from` - gives you the trading day of given date, plus number of trading days 
+* `is_market_day?` - tells you whether the given date is a date US markets are open
+* `market_days_between` - tells number of trading days between two dates
+* `market_days_from` - gives you the trading day of given date, plus number of trading days 
 
 
 Look at the test suite for examples of usage.
