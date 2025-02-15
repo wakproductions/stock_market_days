@@ -1,3 +1,6 @@
+Version 1.4.1 (2/14/2025)
+* Change setting to make rspec default test suite
+
 Verion 1.4.0 (2/14/2025)
 * Expanded covered date range to 1990-2060.
 
