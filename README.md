@@ -8,7 +8,7 @@ Typically, markets are closed on weekends and the following holidays:
 * New Year's Day (January 1st, or first Monday of January if on weekend)
 * Martin Luther King Day (third Monday of January)
 * Washington's Birthday (third Monday of Feburary)
-* Good Friday (Determined by http://www.maa.clell.de/StarDate/publ_holidays.html)
+* Good Friday (Determined by [https://spider.seds.org/spider/ScholarX/publ_holidays.html](https://spider.seds.org/spider/ScholarX/publ_holidays.html))
 * Memorial Day (last Monday of May)
 * Juneteenth (June 19, or nearest Monday or Friday if on a weekend)
 * Independence Day (July 4, or July 3rd if on Saturday, July 5th if on Sunday)
