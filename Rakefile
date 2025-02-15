@@ -1,8 +1,8 @@
-require "bundler/gem_tasks"
-require 'stock_market_days'
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 
-# This is just a placeholder
-# task :taskname do
-#   # perform logic
-# end
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = 'spec/**/*_spec.rb'
+end
 
+task default: :spec
