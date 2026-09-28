@@ -1,3 +1,6 @@
+Version 1.5.0 (9/28/2026)
+* Changed internal search algorithm to bsearch for major performance boost.
+
 Version 1.4.1 (2/14/2025)
 * Change setting to make rspec default test suite
 
